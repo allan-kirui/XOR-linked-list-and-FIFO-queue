@@ -30,3 +30,41 @@ remove anything.
 • In each of these cases, removing the currently pointed element (ACTUAL
 command) should result in moving the currently pointed element pointer to the
 preceding element, and if it does not exist, to the last element of the list.
+
+
+# List-based FIFO queue
+
+problem
+Algorithms and Data Structures - project 2021FIFO queue on the List data structure
+The task is based on implement a FIFO queue based on a Circular
+Linked list. It can be also a classic Linked list, non-circular but pop and
+push operations must detect the end of the list and return to its
+beginning. It can also be a Doubly Linked List, but since the front and
+back of the queue always follow in one direction, the prev pointers will
+not be used.Push element to FIFO
+• PUSH N - add element N to the end of the queue. Push element to FIFO
+• PUSH N - add element N to the end of the queue. Pop element from FIFO
+• POP - remove the first element from the queue.Empty FIFO
+• After creating the queue, both the list and the queue are empty and the front and back pointers
+are set to nullptr.
+• Before the first element is pushed to the queue, a new element should be added to the list (as
+part of the PUSH N command), creating space for a new element of the queue.
+• After the first element is added to the queue, the first and back pointers indicate the added
+element, everything seems to look good.Empty FIFO
+• But what if we want to pop from the queue just pushed element?
+• After the last element of the queue is popped, the pointers cannot be moved, so you have to
+otherwise remember that the queue is empty, e.g. using an additional logical variable or assign
+the nulptr value to the front pointer (or both front and back) .Empty FIFO
+• When adding another element using the PUSH N command (in the case of a full list, when the
+front pointer indicate the successor of the back pointer), you need to enlarge the list by 1 item,
+adding a new element as a successor of the back pointer.Empty FIFO
+• Move forward the front pointer after removing the element item from FIFO, or not? Empty FIFO
+• In the second case, we will have to update one of both pointers during removing element from 2-
+element list and during opposite operation (adding second item to a 1-element list).
+• In the first case, the interpretation of pointers is clear, in the second, it depends on the number of
+items in the queue.
+• PRINT_QUEUE - Prints all elements starting with front and ending with back.
+• When front and back indicate to the same element, it is printed when isEmpty variable contains
+the value of false.
+• GARBAGE_SOFT - Change the values of all elements of the list that do not belong to the queue to 0.
+• GARBAGE_HARD - Remove all elements from the list that does not belong to the queue
