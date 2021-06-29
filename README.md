@@ -34,8 +34,6 @@ preceding element, and if it does not exist, to the last element of the list.
 
 # List-based FIFO queue
 
-problem
-Algorithms and Data Structures - project 2021FIFO queue on the List data structure
 The task is based on implement a FIFO queue based on a Circular
 Linked list. It can be also a classic Linked list, non-circular but pop and
 push operations must detect the end of the list and return to its
