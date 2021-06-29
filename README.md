@@ -1,7 +1,7 @@
 # XOR-linked-list
-Implementation of a bidirectional list using XOR 
-The task is based on implement a bidirectional list. A classic
-bidirectional list stores successor and predecessor addresses in nodes. Doubly Linked List vs. XOR linked list
+Implementation of a bidirectional list using XOR. 
+The task is based on implement a bidirectional list. 
+A classic bidirectional list stores successor and predecessor addresses in nodes. Doubly Linked List vs. XOR linked list
 In our task the list stores only xor of these addresses in nodes. This
 saves approximately 50% of memory used by the list structure.Adding elements to list (at begin or end)
 • ADD_BEG N - adding an element with value N to the beginning of the list.
